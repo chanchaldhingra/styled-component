@@ -4,7 +4,7 @@ interface StyledButtonProps {
   variant?: 'outline' | 'default';
 }
 
-const StyledButton = styled.button<StyledButtonProps>`
+export const StyledButton = styled.button<StyledButtonProps>`
   /* Example styles */
   background: ${({ variant }) => (variant === 'outline' ? 'transparent' : '#007bff')};
   color: ${({ variant }) => (variant === 'outline' ? '#007bff' : '#fff')};
@@ -14,4 +14,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   cursor: pointer;
 `;
 
-export default StyledButton;
+export const FancyButton = styled(StyledButton)`
+  gradient: linear-gradient(45deg,rgb(118, 110, 125),rgb(14, 43, 92));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+`;
